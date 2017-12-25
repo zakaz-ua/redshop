@@ -2,14 +2,13 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="style/media.css">
     <link rel="stylesheet" href="style/media_modal.css">
-
-
 
 </head>
 <body>
@@ -17,8 +16,12 @@
 <section id="topmenu">
     <div class="menu">
         <div class="logo"><h1><a href="#slider" data-target="anchor">RedShop</a></h1></div>
-        <div class="korzina"><div class="korzina_top"><span class="korzina_top_items">3</span></div></div>
-        <div class="spisok"><div class="items_list"></div></div>
+        <div class="korzina">
+            <div class="korzina_top"><span class="korzina_top_items">3</span></div>
+        </div>
+        <div class="spisok">
+            <div class="items_list"></div>
+        </div>
         <nav class="nav_menu">
             <ul class="top-menu topmenu_hide">
                 <li><a href="#tel_1" data-target="anchor">IPhone 6</a></li>
@@ -29,516 +32,476 @@
                 <li><a href="#tel_6" data-target="anchor">IPhone 6</a></li>
             </ul>
         </nav>
-   </div>
+    </div>
 
-   <div class="clearfix"></div>
+    <div class="clearfix"></div>
 </section>
 <div class="modal_window" id="modal">
-	<div class="korzina_tovarov">
-   		<h2 class="zakaz_title">Ваши заказы</h2>
-   		<ul class="korz_title korz">
-   			<li>Название</li>
-   			<li>Кол-во</li>
-   			<li>Цена</li>
-   			<li>Скидка</li>
-   			<li>Скидка</li>
-   			<li>Итого</li>
-   		</ul>
+    <div class="korzina_tovarov">
+        <h2 class="zakaz_title">Ваши заказы</h2>
+        <ul class="korz_title korz">
+            <li>Название</li>
+            <li>Кол-во</li>
+            <li>Цена</li>
+            <li>Скидка</li>
+            <li>Скидка</li>
+            <li>Итого</li>
+        </ul>
 
 
-         <div class="korzina_scroll">
-         	<div class="after_el"></div>
+        <div class="korzina_scroll">
+            <div class="after_el"></div>
 
-<!--       		<ul class="korz_content korz">
-      			<li>iPhone 6</li>
-      			<li class="sum">1</li>
-      			<li>$400</li>
-      			<li>&#8212;</li>
-      			<li>
-      				<div class="btn_send">
-      					<button class="btn btn_plus"></button>
-      					<button class="btn btn_minus"></button>
-      					<button class="btn btn_del"></button>
-      				</div>
-      			</li>
-      			<li class="cash">$<span class="money_cash">100000</span></li>      			
-      		</ul> -->
-<!--       		<ul class="korz_content korz">
-      			<li>iPhone 6</li>
-      			<li class="sum">1</li>
-      			<li>$400</li>
-      			<li>&#8212;</li>
-      			<li>
-      				<div class="btn_send">
-      					<button class="btn btn_plus"></button>
-      					<button class="btn btn_minus"></button>
-      					<button class="btn btn_del"></button>
-      				</div>
-      			</li>
-      			<li class="cash">$<span class="money_cash">100000</span></li>      			
-      		</ul> -->
+            <div class="korz_pay">
+                <p class="full_sum">
+                    <span class="quantity">1шт.</span>
+                    <span class="text">на сумму:</span>
+                    <span class="money">4000</span><span class="money_hr">грн.</span>
+                </p>
+                <!--    			<input type="submit" value="Оплатить" name="sub_btn" class="sub"> -->
+                <a href="oplata.html"> <input type="submit" value="Оплатить" name="sub_btn" class="sub" id="sub"></a>
+            </div>
 
-<!--       		<ul class="korz_content korz">
-      			<li>iPhone 6</li>
-      			<li class="sum">1</li>
-      			<li>$400</li>
-      			<li>&#8212;</li>
-      			<li>
-      				<div class="btn_send">
-      					<button class="btn btn_plus"></button>
-      					<button class="btn btn_minus"></button>
-      					<button class="btn btn_del"></button>
-      				</div>
-      			</li>
-      			<li class="cash">$<span class="money_cash">100000</span></li>      			
-      		</ul>
-
-      		<ul class="korz_content korz">
-      			<li>iPhone 6</li>
-      			<li class="sum">1</li>
-      			<li>$400</li>
-      			<li>&#8212;</li>
-      			<li>
-      				<div class="btn_send">
-      					<button class="btn btn_plus"></button>
-      					<button class="btn btn_minus"></button>
-      					<button class="btn btn_del"></button>
-      				</div>
-      			</li>
-      			<li class="cash">$<span class="money_cash">100000</span></li>      			
-      		</ul>
-
-      		<ul class="korz_content korz">
-      			<li>iPhone 6</li>
-      			<li class="sum">1</li>
-      			<li>$400</li>
-      			<li>&#8212;</li>
-      			<li>
-      				<div class="btn_send">
-      					<button class="btn btn_plus"></button>
-      					<button class="btn btn_minus"></button>
-      					<button class="btn btn_del"></button>
-      				</div>
-      			</li>
-      			<li class="cash">$<span class="money_cash">100000</span></li>      			
-      		</ul>
-
-      		<ul class="korz_content korz">
-      			<li>iPhone 6</li>
-      			<li class="sum">1</li>
-      			<li>$400</li>
-      			<li>&#8212;</li>
-      			<li>
-      				<div class="btn_send">
-      					<button class="btn btn_plus"></button>
-      					<button class="btn btn_minus"></button>
-      					<button class="btn btn_del"></button>
-      				</div>
-      			</li>
-      			<li class="cash">$<span class="money_cash">100000</span></li>      			
-      		</ul> -->
-
-       <!--   </div> -->
-
-   		<div class="korz_pay">
-   			<p class="full_sum">
-   				<span class="quantity">1шт.</span>
-   				<span class="text">на сумму:</span>
-   				<span class="money">4000</span><span class="money_hr">грн.</span>
-   			</p>
-<!--    			<input type="submit" value="Оплатить" name="sub_btn" class="sub"> -->
-   			<a href="oplata.html"> <input type="submit" value="Оплатить" name="sub_btn" class="sub" id="sub"></a>
-   		</div>
-
-   		<div class="korz_close_window"></div>
-   </div>
-</div>
-
-
-<section id="slider">
-
-	<div class="vremya">
-		<form name=MyForm>
-			<span class="nadpis"> Вы находитесь на сайте:</span><br><br>
-			<input type=button value="Обнулить" onclick="ClearСlock()">
-			<input name=stopwatch size=10 value="00:00:00.00">
-			<input type=button value="Запуск/Остановить" onclick="StartStop()">
-		</form>
-	</div>
-
-    <div class="header">
-        <h1> Качественные товары по низкой цене от</h1>
-        <h2> RedShop</h2>
-        <h3> прокрути чтобы узнать больше</h3>
+            <div class="korz_close_window"></div>
+        </div>
     </div>
-    <div class="mouse_red"></div>
-</section>
-
-<section id="tel_1">
-	<div class="tel_left">
-		<h2>iPhone 6</h2>
-		<div class="tel_text">
-			<p>Новый дисплей Retina HD</p>
-			<p>Камера - 8 мп</p>
-			<p>Процессор Apple A8</p>
-			<p>Встроеннная память - 32 гб</p>
-			<p>Сканер отпечатка пальца</p>	
-		</div>
-		<div class="tel_link"><a href="">Подробнее</a></div>
-		<div class="tel_text_window tel_window_1">
-			<p class="tel_link_close"><img src="images/close_icon.png" alt=""></p>
-			<h2>iPhone 6</h2>
-			<div class="tel_text">
-				<p>Новый дисплей Retina HD</p>
-				<p>Камера - 8 мп</p>
-				<p>Процессор Apple A8</p>
-				<p>Встроеннная память - 32 гб</p>
-				<p>Сканер отпечатка пальца</p>	
-			</div>	
-		</div>
-		<span class="btn_add"><a href="">Добавить в корзину</a></span>
-	</div>
-	<div class="tel_right">
-		<img src="images/tel_1.png" alt="Мобильники">
-	</div>
-	<div class="clearfix"></div>
-</section>
-
-<section id="tel_2">
-	<div class="tel_left">
-		<img src="images/tel_2.png" alt="Мобильники">
-	</div>
-	<div class="tel_right">
-		<h2>iPhone 6</h2>
-		<div class="tel_text">
-			<p>Новый дисплей Retina HD</p>
-			<p>Камера - 8 мп</p>
-			<p>Процессор Apple A8</p>
-			<p>Встроеннная память - 32 гб</p>
-			<p>Сканер отпечатка пальца</p>	
-		</div>
-		<div class="tel_link"><a href="">Подробнее</a></div>
-		<div class="tel_text_window tel_window_2">
-			<p class="tel_link_close"><img src="images/close_icon.png" alt=""></p>
-			<h2>iPhone 6</h2>
-			<div class="tel_text">
-				<p>Новый дисплей Retina HD</p>
-				<p>Камера - 8 мп</p>
-				<p>Процессор Apple A8</p>
-				<p>Встроеннная память - 32 гб</p>
-				<p>Сканер отпечатка пальца</p>	
-			</div>	
-		</div>
-		<span class="btn_add"><a href="">Добавить в корзину</a></span>
-	</div>
-	<div class="clearfix"></div>
-</section>
-
-<section id="tel_3">
-	<div class="tel_left">
-		<h2>iPhone 6</h2>
-		<div class="tel_text">
-			<p>Новый дисплей Retina HD</p>
-			<p>Камера - 8 мп</p>
-			<p>Процессор Apple A8</p>
-			<p>Встроеннная память - 32 гб</p>
-			<p>Сканер отпечатка пальца</p>	
-		</div>
-		<div class="tel_link"><a href="">Подробнее</a></div>
-		<div class="tel_text_window tel_window_1">
-			<p class="tel_link_close"><img src="images/close_icon.png" alt=""></p>
-			<h2>iPhone 6</h2>
-			<div class="tel_text">
-				<p>Новый дисплей Retina HD</p>
-				<p>Камера - 8 мп</p>
-				<p>Процессор Apple A8</p>
-				<p>Встроеннная память - 32 гб</p>
-				<p>Сканер отпечатка пальца</p>	
-			</div>	
-		</div>
-		<span class="btn_add"><a href="">Добавить в корзину</a></span>
-	</div>
-	<div class="tel_right">
-		<img src="images/tel_1.png" alt="Мобильники">
-	</div>
-	<div class="clearfix"></div>
-</section>
-
-<section id="tel_4">
-	<div class="tel_left">
-		<img src="images/tel_2.png" alt="Мобильники">
-	</div>
-	<div class="tel_right">
-		<h2>iPhone 6</h2>
-		<div class="tel_text">
-			<p>Новый дисплей Retina HD</p>
-			<p>Камера - 8 мп</p>
-			<p>Процессор Apple A8</p>
-			<p>Встроеннная память - 32 гб</p>
-			<p>Сканер отпечатка пальца</p>	
-		</div>
-		<div class="tel_link"><a href="">Подробнее</a></div>
-		<div class="tel_text_window tel_window_2">
-			<p class="tel_link_close"><img src="images/close_icon.png" alt=""></p>
-			<h2>iPhone 6</h2>
-			<div class="tel_text">
-				<p>Новый дисплей Retina HD</p>
-				<p>Камера - 8 мп</p>
-				<p>Процессор Apple A8</p>
-				<p>Встроеннная память - 32 гб</p>
-				<p>Сканер отпечатка пальца</p>	
-			</div>	
-		</div>
-		<span class="btn_add"><a href="">Добавить в корзину</a></span>
-	</div>
-	<div class="clearfix"></div>
-</section>
-
-<section id="tel_5">
-	<div class="tel_left">
-		<h2>iPhone 6</h2>
-		<div class="tel_text">
-			<p>Новый дисплей Retina HD</p>
-			<p>Камера - 8 мп</p>
-			<p>Процессор Apple A8</p>
-			<p>Встроеннная память - 32 гб</p>
-			<p>Сканер отпечатка пальца</p>	
-		</div>
-		<div class="tel_link"><a href="">Подробнее</a></div>
-		<div class="tel_text_window tel_window_1">
-			<p class="tel_link_close"><img src="images/close_icon.png" alt=""></p>
-			<h2>iPhone 6</h2>
-			<div class="tel_text">
-				<p>Новый дисплей Retina HD</p>
-				<p>Камера - 8 мп</p>
-				<p>Процессор Apple A8</p>
-				<p>Встроеннная память - 32 гб</p>
-				<p>Сканер отпечатка пальца</p>	
-			</div>	
-		</div>
-		<span class="btn_add"><a href="">Добавить в корзину</a></span>
-	</div>
-	<div class="tel_right">
-		<img src="images/tel_1.png" alt="Мобильники">
-	</div>
-	<div class="clearfix"></div>
-</section>
-
-<section id="tel_6">
-	<div class="tel_left">
-		<img src="images/tel_2.png" alt="Мобильники">
-	</div>
-	<div class="tel_right">
-		<h2>iPhone 6</h2>
-		<div class="tel_text">
-			<p>Новый дисплей Retina HD</p>
-			<p>Камера - 8 мп</p>
-			<p>Процессор Apple A8</p>
-			<p>Встроеннная память - 32 гб</p>
-			<p>Сканер отпечатка пальца</p>	
-		</div>
-		<div class="tel_link"><a href="">Подробнее</a></div>
-		<div class="tel_text_window tel_window_2">
-			<p class="tel_link_close"><img src="images/close_icon.png" alt=""></p>
-			<h2>iPhone 6</h2>
-			<div class="tel_text">
-				<p>Новый дисплей Retina HD</p>
-				<p>Камера - 8 мп</p>
-				<p>Процессор Apple A8</p>
-				<p>Встроеннная память - 32 гб</p>
-				<p>Сканер отпечатка пальца</p>	
-			</div>	
-		</div>
-		<span class="btn_add"><a href="">Добавить в корзину</a></span>
-	</div>
-	<div class="clearfix"></div>
-</section>
-
-<section class="subscribe">
-	<div class="subscribe-content">
-		<h2>Подпишитесь на обновление товаров</h2>
-		<form action="#" method="post">
-			<input class="subscribe_text" type="text" name="subscribe_text" placeholder="Введите ваш e_mail">
-			<button class="subscribe_btn">Подписаться</button>
-		</form>
-	</div>
-</section>
-
-<section class="footer">
-	<p class="social">
-		<span>Facebook</span><span>Instagram</span>
-	</p>
-	<p class="phone">
-		<span>0666-66-66-66</span>
-		<span>0666-66-66-66</span>		
-	</p>
-	<p class="redbox">
-		<span>Created by Redbox</span>
-	</p>	
-</section>
 
 
-<script
-  src="https://code.jquery.com/jquery-3.2.1.min.js"
-  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-  crossorigin="anonymous">
-</script>
+    <section id="slider">
 
-<script 
-  src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
-  integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
-  crossorigin="anonymous">
-</script>
+        <div class="vremya">
+            <form name=MyForm>
+                <span class="nadpis"> Вы находитесь на сайте:</span><br><br>
+                <input type=button value="Обнулить" onclick="ClearСlock()">
+                <input name=stopwatch size=10 value="00:00:00.00">
+                <input type=button value="Запуск/Остановить" onclick="StartStop()">
+            </form>
+        </div>
 
-<script>
-	let i = 0;
-	$('document').ready(function(){
-		let index = 0;
+        <div class="header">
+            <h1> Качественные товары по низкой цене от</h1>
+            <h2> RedShop</h2>
+            <h3> прокрути чтобы узнать больше</h3>
+        </div>
+        <div class="mouse_red"></div>
+    </section>
 
-		$('.btn_add').on('click', function(event){
-			event.preventDefault();
-			index++;
-			$('.korzina_top_items').show();
-			$('.korzina_top_items').text(index);
+    <section id="tel_1">
+        <div class="tel_left">
+            <h2>iPhone 6</h2>
+            <div class="tel_text">
+                <p>Новый дисплей Retina HD</p>
+                <p>Камера - 8 мп</p>
+                <p>Процессор Apple A8</p>
+                <p>Встроеннная память - 32 гб</p>
+                <p>Сканер отпечатка пальца</p>
+            </div>
+            <div class="tel_link"><a href="">Подробнее</a></div>
+            <div class="tel_text_window tel_window_1">
+                <p class="tel_link_close"><img src="images/close_icon.png" alt=""></p>
+                <h2>iPhone 6</h2>
+                <div class="tel_text">
+                    <p>Новый дисплей Retina HD</p>
+                    <p>Камера - 8 мп</p>
+                    <p>Процессор Apple A8</p>
+                    <p>Встроеннная память - 32 гб</p>
+                    <p>Сканер отпечатка пальца</p>
+                </div>
+            </div>
+            <span class="btn_add"><a href="">Добавить в корзину</a></span>
+        </div>
+        <div class="tel_right">
+            <img src="images/tel_1.png" alt="Мобильники">
+        </div>
+        <div class="clearfix"></div>
+    </section>
+
+    <section id="tel_2">
+        <div class="tel_left">
+            <img src="images/tel_2.png" alt="Мобильники">
+        </div>
+        <div class="tel_right">
+            <h2>iPhone 6</h2>
+            <div class="tel_text">
+                <p>Новый дисплей Retina HD</p>
+                <p>Камера - 8 мп</p>
+                <p>Процессор Apple A8</p>
+                <p>Встроеннная память - 32 гб</p>
+                <p>Сканер отпечатка пальца</p>
+            </div>
+            <div class="tel_link"><a href="">Подробнее</a></div>
+            <div class="tel_text_window tel_window_2">
+                <p class="tel_link_close"><img src="images/close_icon.png" alt=""></p>
+                <h2>iPhone 6</h2>
+                <div class="tel_text">
+                    <p>Новый дисплей Retina HD</p>
+                    <p>Камера - 8 мп</p>
+                    <p>Процессор Apple A8</p>
+                    <p>Встроеннная память - 32 гб</p>
+                    <p>Сканер отпечатка пальца</p>
+                </div>
+            </div>
+            <span class="btn_add"><a href="">Добавить в корзину</a></span>
+        </div>
+        <div class="clearfix"></div>
+    </section>
+
+    <section id="tel_3">
+        <div class="tel_left">
+            <h2>iPhone 6</h2>
+            <div class="tel_text">
+                <p>Новый дисплей Retina HD</p>
+                <p>Камера - 8 мп</p>
+                <p>Процессор Apple A8</p>
+                <p>Встроеннная память - 32 гб</p>
+                <p>Сканер отпечатка пальца</p>
+            </div>
+            <div class="tel_link"><a href="">Подробнее</a></div>
+            <div class="tel_text_window tel_window_1">
+                <p class="tel_link_close"><img src="images/close_icon.png" alt=""></p>
+                <h2>iPhone 6</h2>
+                <div class="tel_text">
+                    <p>Новый дисплей Retina HD</p>
+                    <p>Камера - 8 мп</p>
+                    <p>Процессор Apple A8</p>
+                    <p>Встроеннная память - 32 гб</p>
+                    <p>Сканер отпечатка пальца</p>
+                </div>
+            </div>
+            <span class="btn_add"><a href="">Добавить в корзину</a></span>
+        </div>
+        <div class="tel_right">
+            <img src="images/tel_1.png" alt="Мобильники">
+        </div>
+        <div class="clearfix"></div>
+    </section>
+
+    <section id="tel_4">
+        <div class="tel_left">
+            <img src="images/tel_2.png" alt="Мобильники">
+        </div>
+        <div class="tel_right">
+            <h2>iPhone 6</h2>
+            <div class="tel_text">
+                <p>Новый дисплей Retina HD</p>
+                <p>Камера - 8 мп</p>
+                <p>Процессор Apple A8</p>
+                <p>Встроеннная память - 32 гб</p>
+                <p>Сканер отпечатка пальца</p>
+            </div>
+            <div class="tel_link"><a href="">Подробнее</a></div>
+            <div class="tel_text_window tel_window_2">
+                <p class="tel_link_close"><img src="images/close_icon.png" alt=""></p>
+                <h2>iPhone 6</h2>
+                <div class="tel_text">
+                    <p>Новый дисплей Retina HD</p>
+                    <p>Камера - 8 мп</p>
+                    <p>Процессор Apple A8</p>
+                    <p>Встроеннная память - 32 гб</p>
+                    <p>Сканер отпечатка пальца</p>
+                </div>
+            </div>
+            <span class="btn_add"><a href="">Добавить в корзину</a></span>
+        </div>
+        <div class="clearfix"></div>
+    </section>
+
+    <section id="tel_5">
+        <div class="tel_left">
+            <h2>iPhone 6</h2>
+            <div class="tel_text">
+                <p>Новый дисплей Retina HD</p>
+                <p>Камера - 8 мп</p>
+                <p>Процессор Apple A8</p>
+                <p>Встроеннная память - 32 гб</p>
+                <p>Сканер отпечатка пальца</p>
+            </div>
+            <div class="tel_link"><a href="">Подробнее</a></div>
+            <div class="tel_text_window tel_window_1">
+                <p class="tel_link_close"><img src="images/close_icon.png" alt=""></p>
+                <h2>iPhone 6</h2>
+                <div class="tel_text">
+                    <p>Новый дисплей Retina HD</p>
+                    <p>Камера - 8 мп</p>
+                    <p>Процессор Apple A8</p>
+                    <p>Встроеннная память - 32 гб</p>
+                    <p>Сканер отпечатка пальца</p>
+                </div>
+            </div>
+            <span class="btn_add"><a href="">Добавить в корзину</a></span>
+        </div>
+        <div class="tel_right">
+            <img src="images/tel_1.png" alt="Мобильники">
+        </div>
+        <div class="clearfix"></div>
+    </section>
+
+    <section id="tel_6">
+        <div class="tel_left">
+            <img src="images/tel_2.png" alt="Мобильники">
+        </div>
+        <div class="tel_right">
+            <h2>iPhone 6</h2>
+            <div class="tel_text">
+                <p>Новый дисплей Retina HD</p>
+                <p>Камера - 8 мп</p>
+                <p>Процессор Apple A8</p>
+                <p>Встроеннная память - 32 гб</p>
+                <p>Сканер отпечатка пальца</p>
+            </div>
+            <div class="tel_link"><a href="">Подробнее</a></div>
+            <div class="tel_text_window tel_window_2">
+                <p class="tel_link_close"><img src="images/close_icon.png" alt=""></p>
+                <h2>iPhone 6</h2>
+                <div class="tel_text">
+                    <p>Новый дисплей Retina HD</p>
+                    <p>Камера - 8 мп</p>
+                    <p>Процессор Apple A8</p>
+                    <p>Встроеннная память - 32 гб</p>
+                    <p>Сканер отпечатка пальца</p>
+                </div>
+            </div>
+            <span class="btn_add"><a href="">Добавить в корзину</a></span>
+        </div>
+        <div class="clearfix"></div>
+    </section>
+
+    <section class="subscribe">
+        <div class="subscribe-content">
+            <h2>Подпишитесь на обновление товаров</h2>
+            <form action="#" method="post">
+                <input class="subscribe_text" type="text" name="subscribe_text" placeholder="Введите ваш e_mail">
+                <button class="subscribe_btn">Подписаться</button>
+            </form>
+        </div>
+    </section>
+
+    <section class="footer">
+        <p class="social">
+            <span>Facebook</span><span>Instagram</span>
+        </p>
+        <p class="phone">
+            <span>0666-66-66-66</span>
+            <span>0666-66-66-66</span>
+        </p>
+        <p class="redbox">
+            <span>Created by Redbox</span>
+        </p>
+    </section>
 
 
-		});
+    <script
+            src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous">
+    </script>
 
-		$('.btn_add').on('click', function(event){
-			event.preventDefault();
-			$('.after_el').after( '<ul class="korz_content korz"><li>iPhone 6</li><li><span class="sum">1</span></li><li>$<span class="price">400<span></li><li>&#8212;</li><li><div class="btn_send"><button class="btn btn_plus"></button><button class="btn btn_minus"></button><button class="btn btn_del"></button></div></li><li class="cash">$<span class="money_cash">400</span></li></ul>' );
-			});
+    <script
+            src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+            integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+            crossorigin="anonymous">
+    </script>
 
+    <script>
 
-		// $('.korzina_scroll').append( '<div class="korzina_scroll"><ul class="korz_content korz"><li>iPhone 6</li><li class="sum">1</li><li>$<span class="price">400<span></li><li>&#8212;</li><li><div class="btn_send"><button class="btn btn_plus"></button><button class="btn btn_minus"></button><button class="btn btn_del"></button></div></li><li class="cash">$<span class="money_cash">100000</span></li></ul>' );
+        $('document').ready(function () {
+            let index = 0;
+            let i = 0;
 
-		$('.btn_add').on('click', function(event){
-		});
-
-		$('a[data-target*=anchor]').on('click', function(){
-			var target = $(this).attr('href');
-			var bl_top = $(target).offset().top - 170;
-		$('body, html').animate({scrollTop: bl_top}, 700);
-		return false;
-		})
-
-		$('.items_list').on('click', function(){
-			$(".nav_menu .top-menu").toggleClass('topmenu_hide');
-		});
-
-		$('.korzina_top').on('click', function(){
-			$('.korzina_tovarov').show();
-		})
-
-		$('.korz_close_window').on('click', function(){
-			$('.korzina_tovarov').hide();	
-    	});
+            $('.btn_add').on('click', function (event) {
+                event.preventDefault();
+                index++;
+                $('.korzina_top_items').show();
+                $('.korzina_top_items').text(index);
 
 
+            });
 
-    	$('.tel_link').on('click', function(event){
-    		event.preventDefault();
-			$(this).parent().find('.tel_text_window').show();
-		})
-
-		$('.tel_link_close').on('click', function(){
-			$(this).closest('section').find('.tel_text_window').hide();	
-    	});
-		
-
-		$('.korzina_scroll').on('click', '.btn_plus', function(){
-			console.log("click");
-			i = i + 1;
-			let x = $(this).closest('ul').find('.sum').text(i)
-			
-			
-
-			console.log(x);
-			
-			
-			
+            $('.btn_add').on('click', function (event) {
+                event.preventDefault();
+                $('.after_el').after('<ul class="korz_content korz"><li>iPhone 6</li><li><span class="sum">1</span></li><li>$<span class="price">400<span></li><li>&#8212;</li><li><div class="btn_send"><button class="btn btn_plus"></button><button class="btn btn_minus"></button><button class="btn btn_del"></button></div></li><li class="cash">$<span class="money_cash">400</span></li></ul>');
+            });
 
 
-		});
+            // $('.korzina_scroll').append( '<div class="korzina_scroll"><ul class="korz_content korz"><li>iPhone 6</li><li class="sum">1</li><li>$<span class="price">400<span></li><li>&#8212;</li><li><div class="btn_send"><button class="btn btn_plus"></button><button class="btn btn_minus"></button><button class="btn btn_del"></button></div></li><li class="cash">$<span class="money_cash">100000</span></li></ul>' );
 
-		$('.korzina_scroll').on('click', '.btn_minus', function(){	
-			i = i - 1;
-			if(i > 0){
-				$(this).closest('ul').find('.sum').text(i);		
-			}
-			else {
-				return i = 1;
-			}
-		});
-		
-		
-		$('.korzina_scroll').on('click', '.btn_del', function(){
-			$(this).closest('ul').remove();
-		});
+            $('.btn_add').on('click', function (event) {
+            });
+
+            $('a[data-target*=anchor]').on('click', function () {
+                var target = $(this).attr('href');
+                var bl_top = $(target).offset().top - 170;
+                $('body, html').animate({scrollTop: bl_top}, 700);
+                return false;
+            })
+
+            $('.items_list').on('click', function () {
+                $(".nav_menu .top-menu").toggleClass('topmenu_hide');
+            });
+
+            $('.korzina_top').on('click', function () {
+                $('.korzina_tovarov').show();
+            })
+
+            $('.korz_close_window').on('click', function () {
+                $('.korzina_tovarov').hide();
+            });
 
 
+            $('.tel_link').on('click', function (event) {
+                event.preventDefault();
+                $(this).parent().find('.tel_text_window').show();
+            })
 
-	});
+            $('.tel_link_close').on('click', function () {
+                $(this).closest('section').find('.tel_text_window').hide();
+            });
 
-</script>
-<script>
-	    var base = 60;
-    var clocktimer,dateObj,dh,dm,ds,ms;
-    var readout='';
-    var h=1,m=1,tm=1,s=0,ts=0,ms=0,init=0;
-    //функция для очистки поля
-    function ClearСlock() {
-        clearTimeout(clocktimer);
-        h=1;m=1;tm=1;s=0;ts=0;ms=0;
-        init=0;
-        readout='00:00:00.00';
-        document.MyForm.stopwatch.value=readout;
-    }
-    //функция для старта секундомера
-    function StartTIME() {
-        var cdateObj = new Date();
-        var t = (cdateObj.getTime() - dateObj.getTime())-(s*1000);
-        if (t>999) { s++; }
-        if (s>=(m*base)) {
-            ts=0;
-            m++;
-        } else {
-            ts=parseInt((ms/100)+s);
-            if(ts>=base) { ts=ts-((m-1)*base); }
-        }
-        if (m>(h*base)) {
-            tm=1;
-            h++;
-        } else {
-            tm=parseInt((ms/100)+m);
-            if(tm>=base) { tm=tm-((h-1)*base); }
-        }
-        ms = Math.round(t/10);
-        if (ms>99) {ms=0;}
-        if (ms==0) {ms='00';}
-        if (ms>0&&ms<=9) { ms = '0'+ms; }
-        if (ts>0) { ds = ts; if (ts<10) { ds = '0'+ts; }} else { ds = '00'; }
-        dm=tm-1;
-        if (dm>0) { if (dm<10) { dm = '0'+dm; }} else { dm = '00'; }
-        dh=h-1;
-        if (dh>0) { if (dh<10) { dh = '0'+dh; }} else { dh = '00'; }
-        readout = dh + ':' + dm + ':' + ds + '.' + ms;
-        document.MyForm.stopwatch.value = readout;
-        clocktimer = setTimeout("StartTIME()",1);
-    }
-    //Функция запуска и остановки
-    function StartStop() {
-        if (init==0){
-            ClearСlock();
-            dateObj = new Date();
-            StartTIME();
-            init=1;
-        } else {
+
+            $('.korzina_scroll').on('click', '.btn_plus', function () {
+
+                let amountObject = $(this).closest('ul.korz_content').find('span.sum');
+                let priceProductAmountObject = $(this).closest('ul.korz_content').find('span.money_cash');
+
+                let amount = parseInt($(this).closest('ul.korz_content').find('span.sum').text());
+                let priceProduct = parseInt($(this).closest('ul.korz_content').find('span.price').text());
+
+                amount = amount + 1;
+                amountObject.text(amount);
+
+                let priceProductAmountCalculation = amount * priceProduct;
+
+                console.log(priceProductAmountCalculation);
+                priceProductAmountObject.text(priceProductAmountCalculation);
+
+//                alert(amount);
+//                alert(priceProduct);
+//                alert(priceProductAmount);
+//                i = i + 1;
+//                let x = $(this).closest('ul').find('.sum').text(i);
+
+
+//                console.log(x);
+
+
+            });
+
+            $('.korzina_scroll').on('click', '.btn_minus', function () {
+                i = i - 1;
+                if (i > 0) {
+                    $(this).closest('ul').find('.sum').text(i);
+                }
+                else {
+                    return i = 1;
+                }
+            });
+
+
+            $('.korzina_scroll').on('click', '.btn_del', function () {
+                $(this).closest('ul').remove();
+            });
+
+
+        });
+
+    </script>
+    <script>
+        var base = 60;
+        var clocktimer, dateObj, dh, dm, ds, ms;
+        var readout = '';
+        var h = 1, m = 1, tm = 1, s = 0, ts = 0, ms = 0, init = 0;
+
+        //функция для очистки поля
+        function ClearСlock() {
             clearTimeout(clocktimer);
-            init=0;
+            h = 1;
+            m = 1;
+            tm = 1;
+            s = 0;
+            ts = 0;
+            ms = 0;
+            init = 0;
+            readout = '00:00:00.00';
+            document.MyForm.stopwatch.value = readout;
         }
-    }	
-</script>
+
+        //функция для старта секундомера
+        function StartTIME() {
+            var cdateObj = new Date();
+            var t = (cdateObj.getTime() - dateObj.getTime()) - (s * 1000);
+            if (t > 999) {
+                s++;
+            }
+            if (s >= (m * base)) {
+                ts = 0;
+                m++;
+            } else {
+                ts = parseInt((ms / 100) + s);
+                if (ts >= base) {
+                    ts = ts - ((m - 1) * base);
+                }
+            }
+            if (m > (h * base)) {
+                tm = 1;
+                h++;
+            } else {
+                tm = parseInt((ms / 100) + m);
+                if (tm >= base) {
+                    tm = tm - ((h - 1) * base);
+                }
+            }
+            ms = Math.round(t / 10);
+            if (ms > 99) {
+                ms = 0;
+            }
+            if (ms == 0) {
+                ms = '00';
+            }
+            if (ms > 0 && ms <= 9) {
+                ms = '0' + ms;
+            }
+            if (ts > 0) {
+                ds = ts;
+                if (ts < 10) {
+                    ds = '0' + ts;
+                }
+            } else {
+                ds = '00';
+            }
+            dm = tm - 1;
+            if (dm > 0) {
+                if (dm < 10) {
+                    dm = '0' + dm;
+                }
+            } else {
+                dm = '00';
+            }
+            dh = h - 1;
+            if (dh > 0) {
+                if (dh < 10) {
+                    dh = '0' + dh;
+                }
+            } else {
+                dh = '00';
+            }
+            readout = dh + ':' + dm + ':' + ds + '.' + ms;
+            document.MyForm.stopwatch.value = readout;
+            clocktimer = setTimeout("StartTIME()", 1);
+        }
+
+        //Функция запуска и остановки
+        function StartStop() {
+            if (init == 0) {
+                ClearСlock();
+                dateObj = new Date();
+                StartTIME();
+                init = 1;
+            } else {
+                clearTimeout(clocktimer);
+                init = 0;
+            }
+        }
+    </script>
 
 </body>
 </html>
