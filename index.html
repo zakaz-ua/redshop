@@ -400,17 +400,17 @@
 			index++;
 			$('.korzina_top_items').show();
 			$('.korzina_top_items').text(index);
-			// $('.korzina_scroll').append( $('.test').show() );
+
 
 		});
 
 		$('.btn_add').on('click', function(event){
 			event.preventDefault();
-			$('.after_el').after( '<ul class="korz_content korz"><li>iPhone 6</li><li class="sum">1</li><li>$400</li><li>&#8212;</li><li><div class="btn_send"><button class="btn btn_plus"></button><button class="btn btn_minus"></button><button class="btn btn_del"></button></div></li><li class="cash">$<span class="money_cash">100000</span></li></ul>' );
+			$('.after_el').after( '<ul class="korz_content korz"><li>iPhone 6</li><li><span class="sum">1</span></li><li>$<span class="price">400<span></li><li>&#8212;</li><li><div class="btn_send"><button class="btn btn_plus"></button><button class="btn btn_minus"></button><button class="btn btn_del"></button></div></li><li class="cash">$<span class="money_cash">400</span></li></ul>' );
 			});
 
 
-		// $('.korzina_scroll').append( '<div class="korzina_scroll"><ul class="korz_content korz"><li>iPhone 6</li><li class="sum">1</li><li>$400</li><li>&#8212;</li><li><div class="btn_send"><button class="btn btn_plus"></button><button class="btn btn_minus"></button><button class="btn btn_del"></button></div></li><li class="cash">$<span class="money_cash">100000</span></li></ul>' );
+		// $('.korzina_scroll').append( '<div class="korzina_scroll"><ul class="korz_content korz"><li>iPhone 6</li><li class="sum">1</li><li>$<span class="price">400<span></li><li>&#8212;</li><li><div class="btn_send"><button class="btn btn_plus"></button><button class="btn btn_minus"></button><button class="btn btn_del"></button></div></li><li class="cash">$<span class="money_cash">100000</span></li></ul>' );
 
 		$('.btn_add').on('click', function(event){
 		});
@@ -446,16 +446,22 @@
     	});
 		
 
-
-		$('.btn_plus').on('click', function(){			
+		$('.korzina_scroll').on('click', '.btn_plus', function(){
+			console.log("click");
 			i = i + 1;
-			$(this).closest('ul').find('.sum').text(i);
+			let x = $(this).closest('ul').find('.sum').text(i)
+			
+			
+
+			console.log(x);
+			
+			
 			
 
 
 		});
 
-		$('.btn_minus').on('click', function(){
+		$('.korzina_scroll').on('click', '.btn_minus', function(){	
 			i = i - 1;
 			if(i > 0){
 				$(this).closest('ul').find('.sum').text(i);		
@@ -464,10 +470,10 @@
 				return i = 1;
 			}
 		});
-
-		$('.btn').on('hover', function(){
-			// $(this).addClass( "myClass yourClass" );
-			alert('lsjdlfjdlfj');
+		
+		
+		$('.korzina_scroll').on('click', '.btn_del', function(){
+			$(this).closest('ul').remove();
 		});
 
 
