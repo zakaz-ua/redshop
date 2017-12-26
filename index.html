@@ -68,7 +68,7 @@
 
    		<div class="korz_pay">
    			<p class="full_sum">
-   				<span class="quantity">1</span>шт
+   				<span class="quantity">0</span>шт
    				<span class="text">на сумму:</span>
    				<span class="money">0</span><span class="money_hr">грн.</span>
    			</p>
@@ -84,11 +84,11 @@
 <section id="slider">
 
 	<div class="vremya">
-		<form name=MyForm>
+		<form name="MyForm">
 			<span class="nadpis"> Вы находитесь на сайте:</span><br><br>
-			<input type=button value="Обнулить" onclick="ClearСlock()">
-			<input name=stopwatch size=10 value="00:00:00.00">
-			<input type=button value="Запуск/Остановить" onclick="StartStop()">
+			<input type="button" value="Обнулить" onclick="ClearСlock()">
+			<input name="stopwatch" size=10 value="00:00:00.00">
+			<input type="button" value="Запуск/Остановить" onclick="StartStop()">
 		</form>
 	</div>
 
@@ -326,13 +326,21 @@
 			index++;
 			$('.korzina_top_items').show();
 			$('.korzina_top_items').text(index);
-			// $('.korzina_scroll').append( $('.test').show() );
-
 		});
 
 		$('.btn_add').on('click', function(event){
 			event.preventDefault();
 			$('.after_el').after( '<ul class="korz_content korz"><li>iPhone 6</li><li><span class="kol_vo">1</span></li><li>$<span class="price">400</span></li><li>&#8212;</li><li><div class="btn_send"><button class="btn btn_plus"></button><button class="btn btn_minus"></button><button class="btn btn_del"></button></div></li><li class="cash">$<span class="money_cash">400</span></li></ul>' );
+			let full_money = $('.money');
+			let fullSumOfMoneyAll  = 0;
+			$( ".money_cash" ).each(function() {
+				let fullSumOfMoneyItem = parseInt( $( this ).text() );
+				fullSumOfMoneyAll = fullSumOfMoneyAll + fullSumOfMoneyItem;
+				//full_money.text( fullSumOfMoneyAll );
+			});
+			
+			full_money.text( fullSumOfMoneyAll );
+			
 			});
 
 
@@ -352,6 +360,7 @@
 
 		$('.korzina_top').on('click', function(){
 			$('.korzina_tovarov').show();
+
 		})
 
 		$('.korz_close_window').on('click', function(){
@@ -369,8 +378,6 @@
 			$(this).closest('section').find('.tel_text_window').hide();	
     	});
 		
-
-
 		$('.korzina_scroll').on('click', '.btn_plus', function(){			
 
 			let full_amount = $(this).closest('ul').find('.kol_vo');
@@ -386,55 +393,61 @@
 			full_amount.text(amount);
 			full_quantity.text(amount);
 
-			// quantity = quantity + 1;
-			// full_quantity.text( quantity );
-
 			let fullSum = amount * price;
 			full_cash.text( fullSum );
-			full_money.text( fullSum );
-
-
-
-
+			
+			
+			let fullSumOfMoneyAll  = 0;
+			$( ".money_cash" ).each(function() {
+				let fullSumOfMoneyItem = parseInt( $( this ).text() );
+				fullSumOfMoneyAll = fullSumOfMoneyAll + fullSumOfMoneyItem;
+				//full_money.text( fullSumOfMoneyAll );
+			});
+			
+			full_money.text( fullSumOfMoneyAll );
+			
+			
+			let fullQuantityAll  = 0;
+			$( ".kol_vo" ).each(function() {
+				let fullQuantity = parseInt( $( this ).text() );
+				fullQuantityAll = fullQuantityAll + fullQuantity;
+				//full_money.text( fullSumOfMoneyAll );
+			});
+			
+			full_quantity.text( fullQuantityAll );
 		});
 
-
 		$('.korzina_scroll').on('click', '.btn_minus', function(){	
+		
+			let full_kol_vo = $(this).closest('ul').find('.kol_vo').text();
+			if(parseInt(full_kol_vo) == 1){ return false; }
+			
 			let full_amount = $(this).closest('ul').find('.kol_vo');
 			let full_quantity = $('.quantity');
 			let full_money = $('.money');
 			let full_price = $(this).closest('ul').find('.price');
 			let full_cash = $(this).closest('ul').find('.money_cash');
 
-			let x = parseInt( $(this).closest('ul').find('.kol_vo').text() );
+			let amount = parseInt( $(this).closest('ul').find('.kol_vo').text() );
+			let price = parseInt( $(this).closest('ul').find('.price').text() );
+			let cash = parseInt( $(this).closest('ul').find('.money_cash').text() );
+			let money = parseInt( $('.money').text() );
+			let quantity = parseInt( $('.quantity').text() );
+			
+			amount = amount - 1;
+			full_amount.text( amount );
+			full_quantity.text( amount );
 
-			if(x > 1){
-				let amount = parseInt( $(this).closest('ul').find('.kol_vo').text() );
-				let price = parseInt( $(this).closest('ul').find('.price').text() );
-				let cash = parseInt( $(this).closest('ul').find('.money_cash').text() );
-				let money = parseInt( $('.money').text() );
-			// 	let quantity = parseInt( $('.quantity').text() );
-
-				amount = amount - 1;
-				full_amount.text( amount );
-				full_quantity.text(amount);
-
-			// 	quantity = quantity - 1;
-			// 	full_quantity.text( quantity );
-
-				let fullSum = cash - 400;
-				full_cash.text( fullSum );
-				// full_money.text( );
-				let money_full_sum = money + fullSum;
-
-				full_money.text( money_full_sum );
-
-			}
+			let fullSum = cash - 400;
+			full_cash.text( fullSum );
+			
+			let money_back = money - 400;
+			full_money.text( money_back );
+			
+			let quantity_back = quantity - 1;
+			full_quantity.text( quantity_back );
 		});
-		
-		let full_money = $('.money');
-
-
+	
 		$('.korzina_scroll').on('click', '.btn_del', function(){	
 			$(this).closest('ul').remove();
 		});
