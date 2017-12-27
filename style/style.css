@@ -570,6 +570,7 @@ body {
 
 
 .btn_add a {
+	display: inline-block;
     padding: 20px 17px;
     padding-left: 70px;
     font-size: 29px;

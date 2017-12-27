@@ -120,7 +120,7 @@
                          right: -7px;  bottom: -7px; }		
 
 	.nav_menu          { width: 100%; margin-top: 0px; }
-	.nav_menu li       { padding: 5px 10px; border: 1px solid #8B4513; display: block;}
+	.nav_menu li       { padding: 5px 10px; /*border: 1px solid #8B4513;*/ display: block;}
 	.topmenu_hide      { display: none; }
 	.nav_menu li a     { font-size: 17px; }
 	.korzina_top       { background-size: 33px 33px; }
