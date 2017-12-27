@@ -329,10 +329,7 @@
 
 		});
 
-		$('.btn_add').on('click', function(event){
-			event.preventDefault();
-			$('.after_el').after( '<ul class="korz_content korz"><li>iPhone 6</li><li class="sum">1</li><li>$<span class="price">400</span></li><li>&#8212;</li><li><div class="btn_send"><button class="btn btn_plus"></button><button class="btn btn_minus"></button><button class="btn btn_del"></button></div></li><li class="cash">$<span class="money_cash">400</span></li></ul>' );
-				
+		 function addQuantity (){
 				let full_quantity = $('.quantity');
 				let full_total = $('.money');
 
@@ -353,6 +350,13 @@
 					allSum = allSum + itemSum; 
 				});
 				full_total.text( allSum );
+		}
+		
+		$('.btn_add').on('click', function(event){
+			event.preventDefault();
+			$('.after_el').after( '<ul class="korz_content korz"><li>iPhone 6</li><li class="sum">1</li><li>$<span class="price">400</span></li><li>&#8212;</li><li><div class="btn_send"><button class="btn btn_plus"></button><button class="btn btn_minus"></button><button class="btn btn_del"></button></div></li><li class="cash">$<span class="money_cash">400</span></li></ul>' );
+				
+			addQuantity();
 
 			});
 
@@ -390,13 +394,9 @@
 		$('.korzina_scroll').on('click', '.btn_plus', function(){			
 			let full_kol_vo = $(this).closest('ul').find('.sum');
 			let full_cash = $(this).closest('ul').find('.money_cash');
-			let full_quantity = $('.quantity');
-			let full_total = $('.money');
-
 
 			let kol_vo = parseInt( $(this).closest('ul').find('.sum').text() );
 			let price = parseInt( $(this).closest('ul').find('.price').text() );
-
 
 
 			kol_vo = kol_vo + 1;
@@ -405,25 +405,8 @@
 			let cash = kol_vo * price;
 			full_cash.text( cash );
 
+			addQuantity();
 
-
-			let allQuantity = 0;
-			$('.sum').each(function(){
-
-				let itemQuantity = parseInt( $(this).text() );
-				allQuantity = allQuantity + itemQuantity; 
-			});
-			full_quantity.text( allQuantity );
-
-
-
-			let allSum = 0;
-			$('.money_cash').each(function(){
-				
-				let itemSum = parseInt( $(this).text() );
-				allSum = allSum + itemSum; 
-			});
-			full_total.text( allSum );
 
 		});
 
@@ -469,31 +452,9 @@
 
 				let totalQuantity = parseInt( $('.korzina_top_items').text() );
 
-				if(totalQuantity < 1){
-					$('.korzina_top_items').hide();
+				if(totalQuantity < 1){ $('.korzina_top_items').hide(); }
 
-				}
-
-				let full_quantity = $('.quantity');
-				let full_total = $('.money');
-
-
-				let allQuantity = 0;
-				$('.sum').each(function(){
-
-					let itemQuantity = parseInt( $(this).text() );
-					allQuantity = allQuantity + itemQuantity; 
-				});
-				full_quantity.text( allQuantity );
-
-
-				let allSum = 0;
-				$('.money_cash').each(function(){
-					
-					let itemSum = parseInt( $(this).text() );
-					allSum = allSum + itemSum; 
-				});
-				full_total.text( allSum );
+				addQuantity();
 		});
 
 
